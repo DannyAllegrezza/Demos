@@ -3,7 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{B1D0BE3A-091A-4558-95C3-4275386F9321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{1057B247-EA1D-469B-9E10-ADFD2B9D776E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Tests", "Algorithms.Tests\Algorithms.Tests.csproj", "{F860D7B9-3D28-4A13-A04D-4A1FDDDF3C6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures.Tests", "DataStructures.Tests\DataStructures.Tests.csproj", "{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1D0BE3A-091A-4558-95C3-4275386F9321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D0BE3A-091A-4558-95C3-4275386F9321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D0BE3A-091A-4558-95C3-4275386F9321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D0BE3A-091A-4558-95C3-4275386F9321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1057B247-EA1D-469B-9E10-ADFD2B9D776E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1057B247-EA1D-469B-9E10-ADFD2B9D776E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1057B247-EA1D-469B-9E10-ADFD2B9D776E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1057B247-EA1D-469B-9E10-ADFD2B9D776E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F860D7B9-3D28-4A13-A04D-4A1FDDDF3C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F860D7B9-3D28-4A13-A04D-4A1FDDDF3C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F860D7B9-3D28-4A13-A04D-4A1FDDDF3C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F860D7B9-3D28-4A13-A04D-4A1FDDDF3C6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

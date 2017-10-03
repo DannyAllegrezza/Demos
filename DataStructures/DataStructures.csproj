@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ArrayList\" />
+    <Folder Include="BinaryTrees\" />
+    <Folder Include="Graphs\" />
+    <Folder Include="Tries\" />
+    <Folder Include="Queues\" />
+    <Folder Include="Stacks\" />
+  </ItemGroup>
+
+</Project>
