@@ -18,5 +18,11 @@ namespace DataStructures.Tests
             Assert.AreEqual(true, Arrays.Chapter1.HasUniqueCharacters("true"));
             Assert.AreEqual(false, Arrays.Chapter1.HasUniqueCharacters("falsee"));
         }
+
+        [TestMethod]
+        public void TestReplaceSpacesInString()
+        {
+            var word = Arrays.Chapter1.ReplaceAllSpaces(new char[] { 'M', 'r', ' ', 'J', 'o', 'h', 'n', ' ', 'S', 'm', 'i', 't', 'h', ' ', ' ', ' ', ' ', ' ' }, 13);
+        }
     }
 }
