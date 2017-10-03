@@ -6,3 +6,4 @@
         public Node Next { get; set; }
     }
 }
+  

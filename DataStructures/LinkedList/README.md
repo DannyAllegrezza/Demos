@@ -34,3 +34,16 @@ first.Next = middle;
 
 This process of linking nodes is called `chaining`.
 
+## Progressing to Linked List
+A linked list is a data structure that represents a single chain of nodes.
+
+* The linked list has a well defined starting point, the `Head` which provides a pointer to the first Node in the list.
+* The last node is represented by the `Tail` pointer
+
+### Operations
+* Add
+* Remove
+* Find
+* Enumerate
+
+## Add to the Front
