@@ -24,5 +24,18 @@ namespace DataStructures.Tests
         {
             var word = Arrays.Chapter1.ReplaceAllSpaces(new char[] { 'M', 'r', ' ', 'J', 'o', 'h', 'n', ' ', 'S', 'm', 'i', 't', 'h', ' ', ' ', ' ', ' ', ' ' }, 13);
         }
+
+        [TestMethod]
+        public void TestCompressString()
+        {
+            //var bad = Arrays.Chapter1.CompressStringBad("aabcccccaaa");
+            Assert.AreEqual("a2b1c5a3", Arrays.Chapter1.CompressString("aabcccccaaa"));
+
+            Assert.AreEqual("a2b1c5a3d1", Arrays.Chapter1.CompressString("aabcccccaaad"));
+
+            Assert.AreEqual("abcdefg", Arrays.Chapter1.CompressString("abcdefg"));
+
+
+        }
     }
 }

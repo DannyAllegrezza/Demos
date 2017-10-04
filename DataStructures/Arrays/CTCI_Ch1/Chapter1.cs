@@ -79,5 +79,69 @@ namespace DataStructures.Arrays
             }
             return word;
         }
+
+        /// <summary>
+        ///  Doesn't work because keys have to be unique
+        /// </summary>
+        /// <param name="characters"></param>
+        /// <returns></returns>
+        public static string CompressStringBad(string characters)
+        {
+            if (characters == null) return "";
+
+            Dictionary<char, int> matchedChars = new Dictionary<char, int>();
+
+            char last = characters[0];
+            matchedChars.Add(last, 1);
+            // [a | 1]
+
+            for (int i = 1; i < characters.Length; i++)
+            {
+                var currentChar = characters[i];
+                if (currentChar == last)
+                {
+                    matchedChars[currentChar] = matchedChars[currentChar] + 1;
+                }
+                else
+                {
+                    matchedChars.Add(currentChar, 1);
+                    last = currentChar;
+                }
+            }
+            return "";
+        }
+
+        public static string CompressString(string characters)
+        {
+            if (characters == null) return "";
+
+            StringBuilder compressedStringBuilder = new StringBuilder();
+            char currentChar = characters[0];
+            int currentCharCount = 1;
+
+            // walk through the tokens in the string
+            for (int i = 1; i < characters.Length; i++)
+            {
+                if (currentChar == characters[i])
+                {
+                    currentCharCount++;
+                }
+                else
+                {
+                    // token does not match then append current combo and create new token
+                    compressedStringBuilder.Append(currentChar);
+                    compressedStringBuilder.Append(currentCharCount);
+                    currentChar = characters[i];
+                    currentCharCount = 1;
+                }
+            }
+            compressedStringBuilder.Append(currentChar);
+            compressedStringBuilder.Append(currentCharCount);
+
+            string compressedString = compressedStringBuilder.ToString();
+
+            // check the total length of the newly created string and the original, return smallest of two
+            return (compressedString.Length < characters.Length) ? compressedString : characters;
+        }
     }
 }
