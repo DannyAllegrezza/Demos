@@ -10,7 +10,6 @@
     <Folder Include="Graphs\" />
     <Folder Include="Tries\" />
     <Folder Include="Queues\" />
-    <Folder Include="Stacks\" />
   </ItemGroup>
 
 </Project>
