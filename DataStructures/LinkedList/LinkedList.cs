@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DataStructures.LinkedList
+﻿namespace DataStructures.LinkedList
 {
     /// <summary>
     /// A linked list collection capable of basic operations such as 
@@ -13,6 +8,7 @@ namespace DataStructures.LinkedList
     public class LinkedList<T> :
         System.Collections.Generic.ICollection<T>
     {
+        #region Properties
         /// <summary>
         /// The first node in the list or null if empty
         /// </summary>
@@ -30,6 +26,7 @@ namespace DataStructures.LinkedList
             get;
             private set;
         }
+        #endregion Properties
 
         #region Add
         /// <summary>
