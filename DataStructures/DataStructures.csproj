@@ -9,7 +9,6 @@
     <Folder Include="BinaryTrees\" />
     <Folder Include="Graphs\" />
     <Folder Include="Tries\" />
-    <Folder Include="Queues\" />
   </ItemGroup>
 
 </Project>
