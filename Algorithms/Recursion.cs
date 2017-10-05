@@ -2,7 +2,7 @@
 
 namespace Algorithms
 {
-    public class Class1
+    public class Recursion
     {
     }
 }

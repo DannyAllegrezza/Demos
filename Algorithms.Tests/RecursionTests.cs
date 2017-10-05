@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Algorithms.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class RecursionTests
     {
         [TestMethod]
         public void TestMethod1()

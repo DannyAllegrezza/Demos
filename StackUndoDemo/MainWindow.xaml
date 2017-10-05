@@ -1,0 +1,17 @@
+﻿<Window x:Class="StackUndoDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StackUndoDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListBox x:Name="ListBoxStack" HorizontalAlignment="Left" Height="187" Margin="399,26,0,0" VerticalAlignment="Top" Width="108" SelectionChanged="ListBox_SelectionChanged"/>
+        <Button Content="Undo" HorizontalAlignment="Left" Margin="210,255,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="Btn1" Content="1" HorizontalAlignment="Left" Margin="32,26,0,0" VerticalAlignment="Top" Width="102" Height="192" Click="Btn1_Click"/>
+        <Button x:Name="Btn2" HorizontalAlignment="Left" Margin="153,26,0,0" VerticalAlignment="Top" Width="102" Height="192" Content="2" Click="Btn2_Click"/>
+        <Button x:Name="Btn3" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" Width="102" Height="192" Content="3" Click="Btn3_Click"/>
+
+    </Grid>
+</Window>

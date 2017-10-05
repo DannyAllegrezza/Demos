@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{B1D0BE3A-091A-4558-95C3-4275386F9321}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures", "DataStructures\DataStructures.csproj", "{B1D0BE3A-091A-4558-95C3-4275386F9321}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{1057B247-EA1D-469B-9E10-ADFD2B9D776E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{1057B247-EA1D-469B-9E10-ADFD2B9D776E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Tests", "Algorithms.Tests\Algorithms.Tests.csproj", "{F860D7B9-3D28-4A13-A04D-4A1FDDDF3C6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms.Tests", "Algorithms.Tests\Algorithms.Tests.csproj", "{F860D7B9-3D28-4A13-A04D-4A1FDDDF3C6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures.Tests", "DataStructures.Tests\DataStructures.Tests.csproj", "{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures.Tests", "DataStructures.Tests\DataStructures.Tests.csproj", "{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GUI Demos", "GUI Demos", "{A55B7904-C639-4257-A02F-B46D9D55ACE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackUndoDemo", "StackUndoDemo\StackUndoDemo.csproj", "{708887ED-882C-4C29-A7C9-46E86C1A6766}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,16 @@ Global
 		{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB3E0AAD-15BD-4130-AA4B-6A45B5CB7D31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708887ED-882C-4C29-A7C9-46E86C1A6766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708887ED-882C-4C29-A7C9-46E86C1A6766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708887ED-882C-4C29-A7C9-46E86C1A6766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708887ED-882C-4C29-A7C9-46E86C1A6766}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{708887ED-882C-4C29-A7C9-46E86C1A6766} = {A55B7904-C639-4257-A02F-B46D9D55ACE3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5886C788-2009-4636-8DB8-6BBD287C9357}
