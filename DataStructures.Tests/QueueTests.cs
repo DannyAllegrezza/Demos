@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using DataStructures.Queues;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Diagnostics;
 
 namespace DataStructures.Tests
 {
     [TestClass]
     public class QueueTests
     {
+        #region Standard Queue Tests
         [TestMethod]
         public void TestEnqueueFunctionality()
         {
@@ -44,5 +46,28 @@ namespace DataStructures.Tests
                 Assert.AreEqual(i, item);
             }
         }
+        #endregion Standard Queue Tests
+
+        #region Priority Queue Tests
+        [TestMethod]
+        public void TestPriorityQueueRetainsPriority()
+        {
+            var priorityQueue = new Queues.PriorityQueue<int>();
+            int testNum = 59;
+
+            for (int i = 0; i < 10; i++)
+            {
+                int largerNum = i + 50;
+                priorityQueue.Enqueue(largerNum);
+            }
+
+            foreach (var item in priorityQueue)
+            {
+                Assert.AreEqual(item, testNum);
+                testNum--;
+            }
+        }
+        #endregion Priority Queue Tests
+
     }
 }

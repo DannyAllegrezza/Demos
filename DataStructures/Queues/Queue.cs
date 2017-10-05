@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataStructures.Queues
 {
-    public class Queue<T> : IEnumerable<T>
+    public class Queue<T> : IEnumerable<T>, IQueue<T>
     {
         private LinkedList<T> _items = new LinkedList<T>();
 
