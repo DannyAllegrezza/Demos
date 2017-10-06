@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="ArrayList\" />
-    <Folder Include="BinaryTrees\" />
     <Folder Include="Graphs\" />
     <Folder Include="Tries\" />
   </ItemGroup>
