@@ -143,5 +143,33 @@ namespace DataStructures.Arrays
             // check the total length of the newly created string and the original, return smallest of two
             return (compressedString.Length < characters.Length) ? compressedString : characters;
         }
+
+        public static int[] MoveZeroes(int[] arr)
+        {
+            if (arr.Length == 0)
+            {
+                return arr;
+            }
+            if (arr == null)
+            {
+                throw new NullReferenceException("Array cannot be null");
+            }
+
+            // Create a new array the size of the original array
+            int[] newArray = new int[arr.Length];
+            int count = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] != 0)
+                {
+                    newArray[count] = arr[i];
+                    count++;
+                }
+
+            }
+            // new fix the new array 
+            return newArray;
+        }
     }
 }
