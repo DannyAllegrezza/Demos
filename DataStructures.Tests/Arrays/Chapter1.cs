@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace DataStructures.Tests
 {
@@ -48,6 +49,21 @@ namespace DataStructures.Tests
             {
                 Assert.AreEqual(actual[i], expected[i]);
             }
+        }
+
+        [TestMethod]
+        public void TestTheWaveIsValidWhenInputIsEmpty()
+        {
+            var expected = new List<string> { };
+            var result = Arrays.Chapter1.Wave("");
+
+            Assert.AreEqual(expected.Count, result.Count);
+        }
+
+        [TestMethod]
+        public void TestTheWaveIsValid()
+        {
+            var result = Arrays.Chapter1.Wave("dan");
         }
     }
 }

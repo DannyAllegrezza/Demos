@@ -171,5 +171,36 @@ namespace DataStructures.Arrays
             // new fix the new array 
             return newArray;
         }
+
+        /// <summary>
+        /// A method that returns a list of strings to simulate the "wave".
+        /// "dog" --> { "Dog", "dOg", "doG" }
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static List<string> Wave(string str)
+        {
+            var theWaveList = new List<string>();
+
+            if (string.IsNullOrWhiteSpace(str)) { return theWaveList; }
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (Char.IsWhiteSpace(str[i]))
+                {
+                    continue;
+                }
+                theWaveList.Add(AddToWave(str, i));
+            }
+            return theWaveList;
+        }
+
+        private static string AddToWave(string str, int i)
+        {
+            var strChars = str.ToCharArray();
+            strChars[i] = Char.ToUpper(strChars[i]);
+            return new string(strChars);
+        }
     }
 }
