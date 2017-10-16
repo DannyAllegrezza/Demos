@@ -10,11 +10,11 @@ namespace Algorithms.Searching
     /// Abstract: The idea of the algorithm is to divide and conquer, reducing the 
     /// search area by half each time, trying to find the target number.
     /// 
-    /// Worst-case scenario: We have to divide a list of n elements in half repeatedly to  find
+    /// Worst-case scenario O(log n): We have to divide a list of n elements in half repeatedly to  find
     /// the target element, either because the target element will be found at the end of the
     /// last division OR doesn't exist in the data-set at all.
     /// 
-    /// Best-caase scenario: The target element is at the midpoint of the full array, so we 
+    /// Best-case scenario Omega(1): The target element is at the midpoint of the full array, so we 
     /// can stop looking immediately after we start!
     /// </summary>
     public class BinarySearch
