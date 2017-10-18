@@ -40,18 +40,6 @@ namespace DataStructures.Tests
         }
 
         [TestMethod]
-        public void TestMoveZeros()
-        {
-            var actual = Arrays.Chapter1.MoveZeroes(new int[] { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 });
-            var expected = new int[] { 1, 2, 1, 1, 3, 1, 0, 0, 0, 0 };
-
-            for (int i = 0; i < actual.Length; i++)
-            {
-                Assert.AreEqual(actual[i], expected[i]);
-            }
-        }
-
-        [TestMethod]
         public void TestTheWaveIsValidWhenInputIsEmpty()
         {
             var expected = new List<string> { };
