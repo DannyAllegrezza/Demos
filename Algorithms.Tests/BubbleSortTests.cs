@@ -18,6 +18,7 @@ namespace Algorithms.Tests
 
             unsortedArray = BubbleSort.Sort(unsortedArray);
 
+            var result = BubbleSort.Sort(new int[] { 3, 2, 1 });
             Assert.IsTrue(sortedArray.SequenceEqual(unsortedArray));
 
         }
