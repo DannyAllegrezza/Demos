@@ -4,8 +4,21 @@ using System.Collections.Generic;
 namespace DataStructures.Tests
 {
     [TestClass]
-    public class Chapter1
+    public class Chapter1Tests
     {
+        [TestMethod]
+        public void TestFirstNotRepeatingCharacter()
+        {            
+            Assert.AreEqual('c', Arrays.Chapter1.FirstNotRepeatingCharacter("abacabad"));
+            Assert.AreEqual('_', Arrays.Chapter1.FirstNotRepeatingCharacter("aa"));
+            Assert.AreEqual('g', Arrays.Chapter1.FirstNotRepeatingCharacter("ngrhhqbhnsipkcoqjyviikvxbxyphsnjpdxkhtadltsuxbfbrkof"));
+        }
+
+        [TestMethod]
+        public void TestFindDuplicatesContainsDupe(){
+            Assert.AreEqual(3, HashTables.FirstDuplicate.FirstDupe(new int[]{2, 3, 3, 1, 5, 2}));
+            Assert.AreEqual(3, HashTables.FirstDuplicate.FirstDupeArray(new int[] { 2, 3, 3, 1, 5, 2 }));
+        }
         [TestMethod]
         public void TestHasUniqueCharactersWithHashTable()
         {
@@ -21,6 +34,12 @@ namespace DataStructures.Tests
         }
 
         [TestMethod]
+        public void TestRotateImage()
+        {
+
+        }
+
+        [TestMethod]
         public void TestReplaceSpacesInString()
         {
             var word = Arrays.Chapter1.ReplaceAllSpaces(new char[] { 'M', 'r', ' ', 'J', 'o', 'h', 'n', ' ', 'S', 'm', 'i', 't', 'h', ' ', ' ', ' ', ' ', ' ' }, 13);
@@ -29,14 +48,9 @@ namespace DataStructures.Tests
         [TestMethod]
         public void TestCompressString()
         {
-            //var bad = Arrays.Chapter1.CompressStringBad("aabcccccaaa");
             Assert.AreEqual("a2b1c5a3", Arrays.Chapter1.CompressString("aabcccccaaa"));
-
             Assert.AreEqual("a2b1c5a3d1", Arrays.Chapter1.CompressString("aabcccccaaad"));
-
             Assert.AreEqual("abcdefg", Arrays.Chapter1.CompressString("abcdefg"));
-
-
         }
 
         [TestMethod]

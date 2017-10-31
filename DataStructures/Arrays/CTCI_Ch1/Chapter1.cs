@@ -1,11 +1,93 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DataStructures.Arrays
 {
     public class Chapter1
     {
+        public static int[][] RotateImage(int[][] matrix)
+        {
+            int n = matrix[0].Length;
+
+            for (int layer = 0; layer < n / 2; ++layer)
+            {
+                int first = layer;
+                int last = n - 1 - layer;
+
+                for (int i = first; i < last; ++i)
+                {
+                    int offset = i - first;
+                    // save off the top
+                    int top = matrix[first][i];
+                    // left -> top
+                    matrix[first][i] = matrix[last - offset][first];
+                    // bottom -> left
+                    matrix[last - offset][first] = matrix[last][last - offset];
+                    // right -> bottom
+                    matrix[last][last - offset] = matrix[i][last];
+                    // top -> right
+                    matrix[i][last] = top;
+                }
+            }
+            return matrix;
+        }
+        /// <summary>
+        /// https://codefights.com/interview-practice/task/uX5iLwhc6L5ckSyNC
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static char FirstNotRepeatingCharacter(string s)
+        {
+            // hold items in a jagged array
+            // [0] - letter 
+            // [1] - (-1 already seen | 0 - unseen | 1 - unique)
+            // [3] - index of letter in array
+
+            int[][] jagged = new int[26][];
+            for (int i = 0; i < 26; i++)
+            {
+                jagged[i] = new int[2];
+            }
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                // get the character 
+                char letter = s[i];
+                int lookupIndex = char.ToUpper(letter) - 65;
+                // if we are unseen
+                if (jagged[lookupIndex][0] == 0)
+                {
+                    jagged[lookupIndex][0] = 1; // mark as unique
+                    jagged[lookupIndex][1] = i; // store index of char in original string
+                } else
+                {
+                    jagged[lookupIndex][0] = -1; // mark is duplicate
+                }
+            }
+
+            char match = '_';
+            int idx = s.Length;
+            for (int i = 0; i < jagged.Length; i++)
+            {
+                for (int j = 0; j < jagged[i].Length; j++)
+                {
+                    if (jagged[i][0] > 0)
+                    {
+                        // get the index of char from original string
+                        var tmp = jagged[i][1];
+                        if (tmp < idx)
+                        {
+                            match = s[jagged[i][1]];
+                            idx = tmp;
+                        }
+                    }
+                }
+            }
+            return match;
+        }
+
         /// <summary>
         /// Checks to see if a string contains only unique characters
         /// 

@@ -15,10 +15,6 @@ namespace HackerRank.Tests
             MyQueue.Enqueue(865236554);
             MyQueue.Enqueue(664450041);
             MyQueue.Enqueue(13658878);
-            TestEnqueueIsValid();
-
-            MyQueue.Dequeue();
-            TestDequeueIsValid();
         }
 
         [TestMethod]
@@ -30,6 +26,7 @@ namespace HackerRank.Tests
         [TestMethod]
         public void TestDequeueIsValid()
         {
+            MyQueue.Dequeue();
             Assert.AreEqual(MyQueue.Count, 4);
         }    
     }
