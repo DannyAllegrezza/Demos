@@ -31,5 +31,24 @@ namespace CodeFights.Tests
                 result = result.Next;
             }
         }
+
+        [TestMethod]
+        public void TestIsListPalindromeIsValid()
+        {
+            ListNode<int> node = new ListNode<int>();
+            node.Value = 3;
+            var next = new ListNode<int>();
+            next.Value = 1;
+            node.Next = next;
+            var next2 = new ListNode<int>();
+            next2.Value = 2;
+            next.Next = next2;
+            var next3 = new ListNode<int>();
+            next3.Value = 3;
+            next2.Next = next3;
+
+            bool result = CFLinkedLists.IsListPalindrome(node);
+            Assert.IsTrue(result);
+        }
     }
 }
