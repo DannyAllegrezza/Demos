@@ -98,6 +98,7 @@ namespace HackerRank
             }
         }
 
+        // Prints Left, Middle, Right
         public void PrintInOrder()
         {
             if (left != null)
@@ -109,6 +110,34 @@ namespace HackerRank
             {
                 right.PrintInOrder();
             }
+        }
+
+        // Prints Middle, Left, Right
+        public void PrintPreOrder()
+        {
+            Console.Write($"{data} ");
+            if (left != null)
+            {
+                left.PrintPreOrder();
+            }
+            if (right != null)
+            {
+                right.PrintPreOrder();
+            }
+        }
+
+        // Print Left, Right, Middle
+        public void PrintPostOrder()
+        {
+            if (left != null)
+            {
+                left.PrintPostOrder();
+            }
+            if (right != null)
+            {
+                right.PrintPostOrder();
+            }
+            Console.Write($"{data} ");
         }
     }
 }
